@@ -60,7 +60,47 @@ module.exports = merge(common, {
       filename: 'style/[name].css',
       chunkFilename: 'style/[id].css',
     }),
-    /*new CompressionPlugin()*/
+    new HtmlWebpackPlugin({
+      title: 'ELearn',
+      template: './src/index.html',
+      filename: 'index.html',
+      chunks: ['elearn', 'vendor'],
+      favicon: './src/public/favicon.ico',
+      minify: {
+          collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Offline',
+      template: './src/offline.html',
+      filename: 'offline.html',
+      chunks: [],
+      favicon: './src/public/favicon.ico',
+      minify: {
+          collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'PageNotFound',
+      template: './src/404.html',
+      filename: '404.html',
+      chunks: [],
+      favicon: './src/public/favicon.ico',
+      minify: {
+          collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Signin',
+      template: './src/signin.html',
+      filename: 'signin.html',
+      chunks: ['signin', 'vendor'],
+      favicon: './src/public/favicon.ico',
+      minify: {
+          collapseWhitespace: true
+      }
+    })
+    /*,new CompressionPlugin()*/
   ],
   optimization: {
     minimize: true,

@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack')
-const HtmlWebpackPlugin= require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 
@@ -8,7 +7,8 @@ const outputDirectory = 'public';
 
 module.exports = {
   entry: {
-    'p201909091148': './src/index.js'
+    'elearn': './src/index.js',
+    'signin': './src/signin.js',
   },
   output: {
     path: path.join(__dirname, outputDirectory),
@@ -34,13 +34,6 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'P201909091148',
-      template: './src/public/index.html',
-      filename: 'index.html',
-      chunks: ['p201909091148', 'vendor'],
-      favicon: './src/public/favicon.ico'
-    }),
     new CopyPlugin([
       {
         from: 'src/public',
