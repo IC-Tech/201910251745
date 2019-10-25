@@ -9,6 +9,9 @@ module.exports = {
   entry: {
     'elearn': './src/index.js',
     'signin': './src/signin.js',
+    'search': './src/search.js',
+    'profile': './src/profile.js',
+    'lessons': './src/lessons.js'
   },
   output: {
     path: path.join(__dirname, outputDirectory),

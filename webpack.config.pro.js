@@ -99,6 +99,36 @@ module.exports = merge(common, {
       minify: {
           collapseWhitespace: true
       }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Search',
+      template: './src/search.html',
+      filename: 'signin.html',
+      chunks: ['search', 'vendor'],
+      favicon: './src/public/favicon.ico',
+      minify: {
+          collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Profile',
+      template: './src/profile.html',
+      filename: 'profile.html',
+      chunks: ['profile', 'vendor'],
+      favicon: './src/public/favicon.ico',
+      minify: {
+          collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Lessons',
+      template: './src/lessons.html',
+      filename: 'lessons.html',
+      chunks: ['lessons', 'vendor'],
+      favicon: './src/public/favicon.ico',
+      minify: {
+          collapseWhitespace: true
+      }
     })
     /*,new CompressionPlugin()*/
   ],
