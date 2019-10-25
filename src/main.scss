@@ -1,0 +1,201 @@
+@import 'common';
+@import url('public/fonts.css');
+body, a, span, p, textarea {
+  font-family: Roboto,Helvetica,'Segoe UI Emoji',-apple-system,BlinkMacSystemFont,Arial,'IC Noto Sans Sinhala','Segoe UI',Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue', sans-serif;
+  color: col(text-color);
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+* {
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgb(224, 224, 224);
+  position: relative;
+}
+.ic-btn0 {
+  padding: 8px 16px;
+  margin: 4px 2px;
+  font-size: 14px;
+  box-shadow: 0 0 4px #0006;
+  color: #fff;
+  background-color: col(light-4);
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  border: 0;
+  &:active:not(.dis) {
+    transition-duration: $default-transition;
+    background-color: col(light-8);
+    box-shadow: 0 2px 4px #0006;
+  }
+  &.dis {
+    background-color: #aaa;
+  }
+}
+.ICApp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: relative;
+  overflow-y: auto;
+}
+span {
+  &.c01 {
+    font-size: 24px;
+  }
+  &.c03 {
+    font-size: 16px;
+  }
+}
+.app-bar {
+  display: block;
+  height: 48px;
+  background-color: col(light-5);
+  box-shadow: 0 0 10px #0006;
+  padding: 0 14px;
+  z-index: 2;
+  flex-shrink: 0;
+  flex-grow: 0;
+  > div, label {
+    &, div {
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      * {
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+    }
+  }
+  > div:nth-child(1) {
+    float: left;
+    span {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1;
+      margin-top: -2px;
+      color: #fff;
+    }
+  }
+  label {
+    float: right;
+    cursor: pointer;
+    margin-right: -14px;
+    input {
+      display: none;
+    }
+    > div.c1 {
+      padding: 0 10px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      &, div {
+        transition-duration: $default-transition;
+      }
+      div {
+        display: block;
+        background-color: #fff;
+        width: 28px;
+        height: 2px;
+        margin: 2px 0;
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+      }
+    }
+    div.c2 {
+      display: none;
+      position: absolute;
+      box-shadow: 0 0 10px #0006;
+      height: initial;
+      right: 0;
+      top: 48px;
+      &, > * {
+        transition-duration: $default-transition;
+      }
+      > * {
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 20px;
+        color: #000;
+        background-color: #fff;
+        &:hover {
+          background-color: #eee;
+        }
+        &:active {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+}
+#menu-btn input:checked ~ div.c1 {
+  background-color: #fff;
+  div {
+    background-color: col(light-5);
+  }
+}
+#menu-btn input:checked ~ div.c2 {
+  display: flex;
+}
+@keyframes load-ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.main {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+  .load {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    div {
+      display: block;
+      width: 160px;
+      height: 160px;
+      box-sizing: border-box;
+      border: 8px solid col(light-5);
+      border-left-color: #fff;
+      border-right-color: #fff;
+      border-radius: 50%;
+      animation: load-ani .8s infinite forwards normal ease;
+      margin: 0 auto;
+    }
+  }
+  .cont {
+    overflow-y: auto;
+    > * {
+      margin: 0 auto;
+    }
+  }
+}

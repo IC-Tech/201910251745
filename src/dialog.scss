@@ -1,0 +1,73 @@
+/* Copyright © Imesh Chamara 2019 */
+@import 'common';
+.dialog-container {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  transition-duration: .6s;
+  opacity: 0;
+  left: 0px;
+  top: 0px;
+  min-height: 300px;
+  overflow-y: auto;
+}
+.dialog-container.show {
+  z-index: 999;
+  opacity: 1;
+}
+.dialog-container * {
+  font-family: Roboto, 'Noto Sans', sans-serif;
+}
+.dialog {
+  width: 300px;
+  display: flex;
+  margin: 20vh auto;
+  max-height: 200px;
+  background-color: col(dark-2);
+  box-shadow: 0 0 10px #0009;
+  padding: 13px;
+  flex-direction: column;
+  border-radius: 4px;
+}
+.dialog span {
+  display: block;
+}
+.dialog span.c1 {
+  font-size: 17px;
+  word-break: break-all;
+  margin-bottom: 10px;
+}
+.dialog span.c2 {
+  font-size: 13px;
+  height: 100%;
+  overflow-y: auto;
+}
+.dialog div {
+  margin-top: 10px;
+}
+.dialog button {
+  float: right;
+  border: 0;
+  font-size: 13px;
+  padding: 4px 8px;
+  width: 80px;
+  background-color: col(dark-2);
+  color: col(dialog-0);
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition-duration: .4s;
+}
+.dialog button.c1 {
+  background-color: col(light-2);
+}
+.dialog button:hover {
+  background-color: col(light-3);
+}
+.dialog button:active {
+  background-color: col(light-4);
+}

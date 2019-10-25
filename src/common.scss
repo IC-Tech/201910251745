@@ -1,0 +1,6 @@
+/* Copyright © Imesh Chamara 2019 */
+$default-transition: .3s;
+
+@function col($v) {
+  @return unquote("rgb(var(--#{$v}))");
+}
