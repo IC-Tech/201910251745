@@ -26,7 +26,6 @@ class ELearn extends IAR {
 			UI2: 0,
 			ready: false
 		}
-		this.send = this.send.bind(this)
 		var a = firebase.app().options
 		this.analytics = firebase.analytics()
 		this.performance = firebase.performance()
