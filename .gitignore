@@ -1,3 +1,10 @@
 
 node_modules/
 package-lock.json
+firebase-debug.log
+.firebase/
+/public/
+functions/.runtimeconfig.json
+functions/serviceAccountKey.json
+.tmp/
+src/public/google*
