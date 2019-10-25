@@ -103,7 +103,7 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
       title: 'Search',
       template: './src/search.html',
-      filename: 'signin.html',
+      filename: 'search.html',
       chunks: ['search', 'vendor'],
       favicon: './src/public/favicon.ico',
       minify: {
