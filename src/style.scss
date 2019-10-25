@@ -1,0 +1,150 @@
+/* Copyright © Imesh Chamara 2019 */
+@import 'main.scss';
+.main .cont {
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	&, > *{
+		min-height: 0px;
+	}
+	.home {
+		width: 80%;
+		max-width: 600px;
+		span {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		> div{
+			margin: 0 auto;
+			&.c1 {
+				background-image: url('/images/artboard-12-512px.png');
+				width: 80vw;
+        height: 38vw;
+        max-width: 512px;
+        max-height: 196px;
+				background-size: cover;
+				background-position: center center;
+			}
+			&:not(.c1) {
+				width: 80%;
+				max-width: 280px;
+				&, > * {
+					display: block;
+				}
+				> * {
+					width: 100%;
+				}
+			}
+		}
+	}
+	span.c1 {
+		font-size: 28px;
+		font-weight: 500;
+		color: col(light-9);
+	}
+	.messages {
+		display: block;
+		width: 100%;
+		height: 100%;
+		> .c1 {
+			display: block;
+			width: 100%;
+			height: calc(100% - 26px);
+			//background-image: url('https://images8.alphacoders.com/702/thumb-1920-702653.png');/*url('https://images2.alphacoders.com/713/thumb-1920-713297.png');*/
+			background-position: center top;
+			background-size: cover;
+			overflow-y: auto;
+			> .c1 {
+				display: none;
+			}
+		}
+		> .c2 {
+			display: flex;
+			flex-direction: row;
+			position: absolute;
+			bottom: 0;
+			box-shadow: 0 0 10px #0006;
+			height: 26px;
+			width: 100%;
+			> * {
+				box-sizing: border-box;
+				border: 0;
+			}
+			input {
+				width: calc(100% - 52px);
+				box-sizing: border-box;
+				padding: 0 8px;
+			}
+			button {
+				width: 52px;
+				background-color: col(light-5);
+				color: #fff;
+				border-left: 1px solid col(light-5) !important;
+				&:active {
+					color: #000;
+					background-color: #fff;
+				}
+			}
+		}
+		.ms {
+			width: 100%;
+			div.con {
+				display: block;
+				margin-top: 10px;
+				width: calc(100% - 46px);
+			}
+			span {
+				&:nth-child(1) {
+					display: inline-block;
+					padding: 4px 8px;
+					background-color: #e6e6e6;
+					border-radius: 6px;
+					font-size: 14px;
+					max-width: 68%;
+				}
+				&:nth-child(2) {
+					display: block;
+					font-size: 10px;
+				}
+			}
+		}
+		.m1 {
+			display: flex;
+			flex-direction: row;
+			> div {
+				flex-shrink: 0;
+				flex-grow: 0;
+				&:nth-child(1) {
+					display: block;
+					width: 34px;
+					height: 34px;
+					background-size: cover;
+					background-image: url('/images/avatar/default.png');
+					background-position: top center;
+					border: 2px solid col(light-9);
+					border-radius: 50%;
+					margin: 4px;
+					cursor: pointer;
+				}
+			}
+		}
+		.m2 {
+			div.con {
+				width: calc(100% - 10px);
+				display: flex;
+				flex-direction: column;
+			}
+			span {
+				text-align: right;
+				&:nth-child(1) {
+					margin-left: auto;
+				}
+				&:nth-child(2) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
