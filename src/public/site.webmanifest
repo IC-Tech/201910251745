@@ -1,6 +1,6 @@
 {
-    "short_name": "P201909091148",
-    "name": "P201909091148",
+    "short_name": "ELearn",
+    "name": "IC-Tech | ELearn",
     "start_url": ".",
     "icons": [
         {
@@ -14,8 +14,11 @@
             "type": "image/png"
         }
     ],
-    "description": "P201909091148 by Imesh Chamara 2019",
+    "description": "ELearn is simple learning tool. you can install into you phone, computer or other any device that has a web browser. We offer this App with no ads and no payment required. Copyright © Imesh Chamara 2019",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "lang" : "English",
+    "screenshots" : [],
+    "orientation" : "any"
 }
