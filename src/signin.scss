@@ -1,0 +1,27 @@
+@import 'main.scss';
+.main .cont {
+	> div {
+		display: flex;
+		flex-direction: column;
+		* {
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+		> div {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			max-width: 380px;
+			margin: 0 auto;
+			margin-top: 10px;
+			> * {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+	span {
+		display: block;
+		text-align: center;
+	}
+}
